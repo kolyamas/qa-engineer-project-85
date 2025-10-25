@@ -76,18 +76,6 @@
     - Переходим по ссылке из сообщения, которое пришло на Email
   expected-result: |
     Пользователь должен получить сообщение для восстановления пароля
-
-- summary: |
-    Настройка интерфейса
-  requirement: |
-    
-  prerequisites: |
-    
-  test-data: |
-    
-  steps:
-    
-  expected-result: |
   
 - summary: |
     Отправка личных сообщений
@@ -166,24 +154,67 @@
 - summary: |
     Подсчет очков
   requirement: |
-    
+    При выигранном батле начисляется одно очко
   prerequisites: |
-    
+    игрок kolyamas побеждает в батле с игроком Ekate
   test-data: |
     Профиль игрока kolyamas и профиль игрока Ekate
   steps:
-    
+    - игрок kolyamas создает игру
+    - игрок Ekate присоединяется к лобби
+    - игрок kolyamas решает задачу правильно первым
   expected-result: |
+    В конце батла изменяется количество очков в профиле kolyamas в соответствии с результатом
 
 - summary: |
     Ведение рейтинга пользователей
   requirement: |
-    
+    Фильтрация рейтинга пользователей
   prerequisites: |
-    
+    Открыта страница с рейтингом пользователей
   test-data: |
-    Профиль игрока kolyamas
+    Points, total, 20 Users per page
   steps:
-    
+    - Фильтруем рейтинг за все время (total)
+    - Фильтруем рейтинг по очкам (points)
+    - Выбираем число 20 в фильтре "Users per page"
   expected-result: |
-    
+    Должно отображаться первые 20 пользователей на странице, отфильтрованных по количеству очков за все время
+
+- summary: |
+    Проверка пароля на надежность при регистрации
+  requirement: |
+    При ненадежном пароле должна возникнуть ошибка
+  prerequisites: |
+    Открыта страница регистрации
+  test-data: |
+    Nickname = kolyamasl Email = kolyamasl@mail.ru Password = 123
+    Nickname = kolyamasl Email = kolyamasl@mail.ru Password = йцуке
+    Nickname = kolyamasl Email = kolyamasl@mail.ru Password = 1111111111111111
+  steps:
+    - вводим Nickname"kolyamasl"
+    - вводим Email = kolyamasl@mail.ru
+    - вводим Password = 123
+    - вводим Password Confirmation = 123
+    - нажимаем Submit
+    - вводим Password = йцуке
+    - вводим Password Confirmation = йцуке
+    - нажимаем Submit
+    - вводим Password = 1111111111111111
+    - вводим Password Confirmation = 1111111111111111
+  expected-result: |
+    Должнs возникнуть ошибка "Should be from 6 to 16 characters" и "Should contain at least one special character"
+
+- summary: |
+    Совместимость с различными версиями браузеров
+  requirement: |
+    Сайт должен исправно работать на различных версиях браузеров
+  prerequisites: |
+    Открыты браузеры Microsoft Edge, Opera, Google Chrome
+  test-data: |
+    Microsoft Edge, Opera, Google Chrome
+  steps:
+    - переходим на страницу сайта в браузерах Microsoft Edge, Opera, Google Chrome
+    - проверяем его работоспособность
+  expected-result: |
+    Сайт успешно функционирует в различных браузерах
