@@ -148,3 +148,42 @@
     - Нажимаем "Create invite"
   expected-result: |
     Должно успешно создаться лобби с пользователем Ekate
+
+- summary: |
+    Вступление в батл
+  requirement: |
+    При присодинении в лобби начинается батл между пользователями
+  prerequisites: |
+    Открыта главная страница сайта
+  test-data: |
+    Профиль игрока kolyamas и профиль игрока Ekate
+  steps:
+    - Нажимаем "Join a battle"
+    - Нажимаем "сражаться" напротив пользователя Ekate
+  expected-result: |
+    Успешно присоединяемся в лобби с пользователем Ekate
+
+- summary: |
+    Подсчет очков
+  requirement: |
+    
+  prerequisites: |
+    
+  test-data: |
+    Профиль игрока kolyamas и профиль игрока Ekate
+  steps:
+    
+  expected-result: |
+
+- summary: |
+    Ведение рейтинга пользователей
+  requirement: |
+    
+  prerequisites: |
+    
+  test-data: |
+    Профиль игрока kolyamas
+  steps:
+    
+  expected-result: |
+    
