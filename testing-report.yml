@@ -63,5 +63,9 @@
   status: pass
 
 - summary: |
+    Выбор соперника при создании игры
+  status: fail
+
+- summary: |
     Смена языка на русский
   status: fail
