@@ -41,6 +41,10 @@
 - summary: |
     Создание батлов с другом
   status: pass
+  
+- summary: |
+    Принятие приглашения в лобби
+  status: pass
 
 - summary: |
     Вступление в батл
