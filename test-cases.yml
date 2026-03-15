@@ -312,7 +312,7 @@
     Microsoft Edge, Opera, Google Chrome
   steps:
     - переходим на страницу сайта в браузерах Microsoft Edge, Opera, Google Chrome
-    - проверяем его работоспособность
+    - проходим по основным разделам сайта
   expected-result: |
     Сайт успешно функционирует в различных браузерах
 
