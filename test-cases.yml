@@ -49,6 +49,7 @@
     Открыта страница регистрации
   test-data: |
     Nickname = kolyamas Email = kolya_maslov_2013@mail.ru Password = jumbas133 Password Confirmation = jumbas133
+    Nickname = Ekate Email = katarzyna@mail.ru Password = jumbas123 Password Confirmation = jumbas123
   steps:
     - Вводим Nickname
     - Вводим Email
@@ -56,7 +57,7 @@
     - Вводим Password Confirmation
     - Нажимаем Submit
   expected-result: |
-    Пользователь должен попасть на главную страницу
+    Пользователь должен попасть на главную страницу, открывается лобби, в правом верхнем углу пользователь видит свой ник
 
 - summary: |
     Авторизация с помощью сторонних сервисов
