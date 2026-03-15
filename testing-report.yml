@@ -47,6 +47,14 @@
   status: pass
 
 - summary: |
+    Создание батлов с ботом
+  status: pass
+
+- summary: |
+    Создание батлов с пользователем
+  status: pass
+
+- summary: |
     Вступление в батл
   status: pass
 
