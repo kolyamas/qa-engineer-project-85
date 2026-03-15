@@ -46,11 +46,12 @@
   requirement: |
     При введении пользователем корректных данных пользователь должен успешно зарегистрироваться
   prerequisites: |
-    Открыта страница регистрации
+    Открыто главное меню сайта
   test-data: |
     Nickname = kolyamas Email = kolya_maslov_2013@mail.ru Password = jumbas133 Password Confirmation = jumbas133
     Nickname = Ekate Email = katarzyna@mail.ru Password = jumbas123 Password Confirmation = jumbas123
   steps:
+    - Нажимаем на кнопку Sing up
     - Вводим Nickname
     - Вводим Email
     - Вводим Password
