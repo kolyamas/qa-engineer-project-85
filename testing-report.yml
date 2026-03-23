@@ -1,4 +1,20 @@
 - summary: |
+    Завершение батла по таймеру
+  status: pass
+
+- summary: |
+    Сдаться в батле
+  status: pass
+
+- summary: |
+    Проигрыш в батле
+  status: pass
+
+- summary: |
+    Победа в батле
+  status: pass
+
+- summary: |
     Поддержка переподключения при разрыве соединения
   status: pass
 
